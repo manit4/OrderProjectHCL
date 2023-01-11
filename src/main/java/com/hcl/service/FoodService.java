@@ -18,5 +18,12 @@ public class FoodService {
 		
 		return "Food added Successfully";
 	}
+	
+	public String deleteFoodItem(String foodId) {
+		
+		foodRepository.deleteById(foodId);
+		
+		return "Food Item deleted successfully";
+	}
 
 }

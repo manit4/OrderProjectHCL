@@ -17,8 +17,6 @@ public class Food {
 	private String price;
 	private String category;
 	
-	@ManyToMany(mappedBy = "foodItems", cascade = CascadeType.ALL)
-	private List<User> users;
 	
 	public Food() {
 		super();
@@ -32,16 +30,6 @@ public class Food {
 		this.category = category;
 	}
 	
-	
-	
-	public Food(String foodId, String foodName, String price, String category, List<User> users) {
-		super();
-		this.foodId = foodId;
-		this.foodName = foodName;
-		this.price = price;
-		this.category = category;
-		this.users = users;
-	}
 	public String getFoodId() {
 		return foodId;
 	}
@@ -65,12 +53,6 @@ public class Food {
 	}
 	public void setCategory(String category) {
 		this.category = category;
-	}
-	public List<User> getUsers() {
-		return users;
-	}
-	public void setUsers(List<User> users) {
-		this.users = users;
 	}
 
 }
